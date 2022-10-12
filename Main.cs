@@ -33,6 +33,9 @@ namespace Exercise1
                 InitializeComponent();
                 btn_sound_on.BackgroundImage = Image.FromFile(@"../button/sound_on.png");
                 btn_sound_off.BackgroundImage = Image.FromFile(@"../button/sound_off.png");
+
+                btn_sound_on.Visible = false;
+
             }
             catch (Exception ex)
             {
@@ -60,14 +63,19 @@ namespace Exercise1
         {
             Debug.WriteLine("Pause sound");
             PlayerTemp.Pause();
-            isPaused = true;
+            Main.isPaused = true;
+            btn_sound_off.Visible = false;
+            btn_sound_on.Visible = true;
         }
 
         private void btn_sound_on_Click(object sender, EventArgs e)
         {
+            PlayerTemp.Position = _currentPosition;
             Debug.WriteLine("Play sound");
             PlayerTemp.Play();
-            isPaused = false;
+            Main.isPaused = false;
+            btn_sound_on.Visible = false;
+            btn_sound_off.Visible = true;
         }
 
         private void btn_start_Click(object sender, EventArgs e)

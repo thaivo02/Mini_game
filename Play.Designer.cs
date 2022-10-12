@@ -46,7 +46,7 @@ namespace Exercise1
             this.btn_sound_off.BackColor = System.Drawing.SystemColors.GradientInactiveCaption;
             this.btn_sound_off.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btn_sound_off.BackgroundImage")));
             this.btn_sound_off.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btn_sound_off.Location = new System.Drawing.Point(11, 123);
+            this.btn_sound_off.Location = new System.Drawing.Point(11, 69);
             this.btn_sound_off.Name = "btn_sound_off";
             this.btn_sound_off.Size = new System.Drawing.Size(42, 40);
             this.btn_sound_off.TabIndex = 2;

@@ -68,13 +68,18 @@ namespace Exercise1
             Debug.WriteLine("Pause sound");
             PlayerTemp.Pause();
             Main.isPaused = true;
+            btn_sound_off.Visible = false;
+            btn_sound_on.Visible = true;
         }
 
         private void btn_sound_on_Click(object sender, EventArgs e)
         {
+            PlayerTemp.Position = _currentPosition;
             Debug.WriteLine("Play sound");
             PlayerTemp.Play();
             Main.isPaused = false;
+            btn_sound_on.Visible = false;
+            btn_sound_off.Visible = true;
         }
 
         private void btn_exit_Click(object sender, EventArgs e)
